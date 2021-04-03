@@ -20,13 +20,13 @@ paths:
           description: Only assignments available at or after this time are returned.
           schema:
             type: string
-            format: date
+            format: date-time
         - in: query
           name: available_before
           description: Only assignments available at or before this time are returned.
           schema:
             type: string
-            format: date
+            format: date-time
         - in: query
           name: burned
           description: When set to true, returns assignments that have a value in data.burned_at. Returns assignments with a null data.burned_at if false.
@@ -102,7 +102,7 @@ paths:
           description: Only assignments updated after this time are returned.
           schema:
             type: string
-            format: date
+            format: date-time
 
       responses:
         '200':
@@ -279,7 +279,7 @@ paths:
           description: Only level_progressions updated after this time are returned.
           schema:
             type: string
-            format: date
+            format: date-time
       responses:
         '200':
           description: All Level Progressions
@@ -392,7 +392,7 @@ paths:
           name: updated_after
           schema:
             type: string
-            format: date
+            format: date-time
       responses:
         '200':
           description: All Resets
@@ -499,7 +499,7 @@ paths:
           name: updated_after
           schema:
             type: string
-            format: date
+            format: date-time
         - in: query
           name: assignment_ids
           description: Only reviews where data.assignment_id matches one of the array values are returned.
@@ -734,7 +734,7 @@ paths:
           name: updated_after
           schema:
             type: string
-            format: date
+            format: date-time
         - in: query
           description: Return review statistics with a matching value in the hidden attribute
           name: hidden
@@ -893,7 +893,7 @@ paths:
           description: Only study material records updated after this time are returned.
           schema:
             type: string
-            format: date
+            format: date-time
         - in: query
           name: subject_ids
           description: Only study material records where data.subject_id matches one of the array values are returned.
@@ -1191,7 +1191,7 @@ paths:
           description: Only spaced_repetition_systems updated after this time are returned.
           schema:
             type: string
-            format: date
+            format: date-time
       responses:
         '200':
           description: All Study Materials
@@ -1328,7 +1328,7 @@ paths:
           description: Only subjects updated after this time are returned.
           schema:
             type: string
-            format: date
+            format: date-time
       responses:
         '200':
           description: All Subjects
@@ -1777,7 +1777,7 @@ paths:
           description: Only voice_actors updated after this time are returned.
           schema:
             type: string
-            format: date
+            format: date-time
       responses:
         '200':
           description: All Voice Actors
@@ -2139,7 +2139,7 @@ components:
       properties:
         started_at:
           type: string
-          format: date
+          format: date-time
     CreateReviewRequest:
       type: object
       properties:
